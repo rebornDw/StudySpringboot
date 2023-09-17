@@ -1,0 +1,2322 @@
+/*================================================
+Default CSS
+=================================================*/
+$main-color: #fe4c1c;
+$white-color: #ffffff;
+$black-color: #000000;
+
+// Switch css
+.switch-box {
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        top: -4px;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #cecbcb;
+        transition: 0.4s;
+
+        &:before {
+            position: absolute;
+            content: "\ec34";
+            font-family: 'boxicons'!important;
+            color: $black-color;
+            font-size: 24px;
+            text-align: center;
+            top: -1px;
+            left: 4px;
+            transition: 0.4s;
+        }
+    }
+    input:checked + .slider {
+        background-color: #cecbcb;
+    }
+    input:focus + .slider {
+        background-color: #cecbcb;
+    }
+    input:checked + .slider:before {
+        content: "\eb94";
+        color: $black-color;
+    }
+    .slider {
+        &.round {
+            border-radius: 50px;
+
+            &:before {
+                border-radius: 50%;
+            } 
+        }
+    }
+}
+
+// Dark Style CSS
+.theme-dark {
+    body {
+        background-color: #000000;
+        color: #f1f1f1;
+    }
+    p {
+        color: #f1f1f1;
+        
+        a {
+            color: #f1f1f1 !important;
+        }
+    }
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        color: $white-color !important;
+
+        a {
+            color: $white-color !important;
+        }
+    }
+    .bg-f9f9f9 {
+        background-color: #0e0e0e;
+    }
+
+    //Modal
+    .sidebarModal {
+        &.modal {
+            .modal-body {
+                background-color: #171616;
+                .logo {
+                    filter: invert(1);
+                }
+                .social-list {
+                    li {
+                        a {
+                            color: $white-color;
+                            &:hover {
+                                color: $main-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .modal {
+        &.right {
+            .modal-content {
+                button {
+                    &.close {
+                        color: $white-color;
+                        &:hover {
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Navbar
+    .dibiz-responsive-nav {
+        .logo {
+            .white-logo {
+                display: block;
+            }
+            .main-logo {
+                display: none;
+            }
+        }
+    }
+    .dibiz-nav {
+        .navbar-brand {
+            .white-logo {
+                display: block;
+            }
+            .main-logo {
+                display: none;
+            }
+        }
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    a {
+                        color: $white-color;
+                        &.active {
+                            color: $main-color;
+                        }
+                        &:hover {
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .navbar-area {
+        &.is-sticky {
+            background-color: #212020 !important;
+        }
+    }
+    .navbar-style-two {
+        background-color: #212020;
+    }
+    .dibiz-new-navbar-area-style-two {
+        background-color: #212020;
+        .dibiz-nav {
+            .navbar {
+                .others-option {
+                    .option-item {
+                        .side-menu-btn {
+                            i {
+                                color: $white-color;
+                                &:hover {
+                                    color: $main-color;
+                                }
+                            }
+                        }
+                        .search-box {
+                            i {
+                                color: $white-color;
+                                &:hover {
+                                    color: $main-color;
+                                }
+                            }
+                        }
+                        .cart-btn {
+                            i {
+                                color: $white-color;
+                                &:hover {
+                                    color: $main-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .dibiz-responsive-nav {
+        .mean-container {
+            a {
+                &.meanmenu-reveal {
+                    span {
+                        background: $white-color;
+                    }
+                }
+            }
+        }
+    }
+    .others-option-for-responsive {
+        .dot-menu {
+            .inner {
+                .circle {
+                    background-color: $white-color;
+                }
+            }
+        }
+    }
+
+    //Banner
+    .main-banner-area {
+        background-color: #0e0e0e;
+        background-image: unset;
+    }
+    .main-banner-content {
+        .btn-box {
+            .video-btn {
+               color: $white-color;
+            }
+        }
+    }
+    .digital-agency-banner {
+        background: linear-gradient(75deg, #0c0b0c 10%, #353133) !important;
+    }
+    .main-banner {
+        background-image:unset;
+        background-color: unset;
+    }
+    .banner-area-content {
+        form {
+            .form-control {
+                background-color: #0e0e0e;
+            }
+        }
+    }
+    .banner-section {
+        background-color: #1a1919;
+    }
+    .banner-wrapper-area {
+        background-color: #0e0e0e;
+        position: relative;
+        z-index: 1;
+    }
+    .banner-wrapper-content {
+        form {
+            background-color: #252424 !important;
+            .form-control {
+                background-color: #252424 !important;
+            }
+        }
+    }
+    .new-main-banner-area {
+        background-color: #232324;
+    }
+    .new-main-banner-area {
+        &.banner-with-gradient-color {
+            background-color: unset;
+            background: linear-gradient(180deg, #212121 0%, rgba(7, 7, 8, 0) 100%);
+            .new-main-banner-content {
+                p {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    .new-main-banner-wrap-area {
+        background: #0e0e0e;
+    }
+    .new-main-banner-wrap-content {
+        .btn-box {
+            .phone-btn {
+                color: $white-color;
+            }
+        }
+    }
+
+    //Features
+    .single-featured-services-box {
+        background-color: #171717;
+    }
+    .dibiz-features-inner-box {
+        background: #0e0e0e;
+    }
+
+    //What
+    .what-we-do-content-accordion {
+        .accordion {
+            .accordion-item {
+               background-color: transparent;
+               .accordion-title {
+                   color: $white-color;
+               }
+            }
+        }
+    }
+    .dibiz-what-we-do-shape {
+        filter: invert(1);
+    }
+    .dibiz-what-we-do-content {
+        .accordion {
+            .accordion-item {
+                .accordion-title {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    .dibiz-what-we-do-area {
+        &.bg-F7F8FF {
+            background-color: #0e0e0e;
+        }
+    }
+
+    //Services
+    .single-services-box {
+        background-color: $black-color;
+    }
+    .dibiz-services-area {
+        &.bg-F3ECEA {
+            background-color: #0e0e0e;
+        }
+    }
+    .dibiz-services-box {
+        background-color: $black-color;
+        .services-btn {
+            color: $white-color;
+        }
+        &:hover {
+            background-color: $main-color;
+        }
+    }
+    .dibiz-services-box {
+        &.with-border {
+            border: 1px solid #696969;
+            &:hover {
+                p {
+                    color: $white-color;
+                }
+                .services-btn {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    .overview-animate-text {
+        span {
+            color: $white-color;
+        }
+    }
+
+    //Partner
+    .single-partner-item {
+        img {
+            filter: invert(1);
+        }
+    }
+    .dibiz-partner-area {
+        background-image: unset;
+        background-color: #242424;
+    }
+    .dibiz-partner-area-with-color {
+        background: #0e0e0e;
+    }
+
+    //Team
+    .single-team-box {
+        .content {
+            background-color: #0e0e0e;
+        }
+    }
+    .single-team-member {
+        .content {
+            background-color: #0e0e0e;
+        }
+    }
+    .dibiz-team-card {
+        .team-content {
+            span {
+                color: $white-color;
+            }
+        }
+    }
+    .dibiz-team-bottom-text {
+        a {
+            color: $white-color;
+            border-color: $white-color;
+            &:hover {
+                color: $main-color;
+            border-color: $main-color;
+
+            }
+        }
+    }
+
+    //Pricing
+    .single-pricing-box {
+        background-color: $black-color;
+        .pricing-header {
+            h3 {
+                background-color: #0e0e0e;
+            }
+        }
+        .pricing-features {
+            ul {
+                li {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    .dibiz-pricing-card {
+        &.with-style-two {
+            background: #0e0e0e;
+            .pricing-price {
+                color: $white-color;
+                span {
+                    color: $white-color;
+                }
+            }
+            .pricing-list {
+                li {
+                    color: $white-color;
+                }
+            }
+        }
+        &.with-border-style {
+            background: #0e0e0e;
+            border: 1px solid #414141;
+            .pricing-price {
+                color: $white-color;
+                span {
+                    color: $white-color;
+                }
+            }
+            .pricing-list {
+                li {
+                    color: $white-color;
+                }
+            }
+            .pricing-btn {
+                .default-btn-with-radius {
+                   color: $white-color !important;
+                }
+            }
+        }
+    }
+    
+
+    //Box
+    .single-boxes-box {
+        background-color: #0e0e0e;
+    }
+
+    //Portfolio
+    .single-portfolio-item {
+        .content {
+            background-color: #0e0e0e;
+        }
+    }
+    .single-portfolio-box {
+        background-color: #0e0e0e;
+    }
+
+    //Blog
+    .single-blog-post {   
+        background-color: #0b0b0b;
+    }
+    .blog-slides {
+        &.owl-theme {
+            .owl-nav [class*=owl-] {
+                background-color: #222121;
+            }
+        }
+    }
+    .blog-content {
+        .blog-info {
+            .info-date {
+                span {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    .blog-details-desc {
+        background-color: #2a2929;
+        .article-content {
+            .entry-meta {
+                ul {
+                    li {
+                        a {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+            .features-list {
+                li {
+                    color: $white-color;
+                }
+            }
+        }
+        .article-footer {
+            .article-tags {
+                a {
+                    color: $white-color;
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+                span {
+                    color: $white-color;
+                }
+            }
+        }
+        .article-author {
+            background: #0e0e0e;
+            .author-profile {
+                .author-profile-title {
+                    span {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+    .prev-link-wrapper {
+        .prev-title {
+            color: $white-color;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+    .next-link-wrapper {
+        .next-title {
+            color: $white-color;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+    blockquote, .blockquote {
+        background-color: #0e0e0e;
+        &::before {
+            color: $black-color;
+        }
+    }
+    .comments-area {
+        .comment-author {
+            .fn {
+                color: $white-color;
+            }
+        }
+        .comment-body {
+            .reply {
+                a {
+                    color: $white-color;
+                }
+            }
+        }
+        .comment-metadata {
+           color: $white-color !important;
+        }
+        .comment-respond {
+            input {
+                background-color: $black-color;
+                color: $white-color;
+                &::placeholder {
+                    color: $white-color;
+                }
+            }
+            textarea {
+                background-color: $black-color;
+                color: $white-color;
+                &::placeholder {
+                    color: $white-color;
+                }
+            }
+            label {
+                color: $white-color;
+            }
+        }
+    }
+    
+    .form-control {
+        background-color: #1b1a1a;
+        color: $white-color;
+        border-color: #535252;
+        &::placeholder {
+            color: $white-color;
+        }
+    }
+
+    //About
+    .about-content {
+        .features-list {
+            li {
+                color: $white-color;
+            }
+        }
+    }
+    .dibiz-about-content {
+        .about-list {
+            li {
+                color: $white-color;
+            }
+        }
+    }
+
+    //Features
+    .dibiz-features-card {
+        .features-btn {
+            color: $white-color;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+    .overview-box {
+        .overview-content {
+            .content {
+                .features-list {
+                    li {
+                        span {
+                            background-color: #0e0e0e;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Subscribe
+    .dibiz-subscribe-vector-shape {
+        filter: invert(1);
+    }
+    .dibiz-subscribe-area {
+        &.bg-F7F8FF {
+            background-color: #0e0e0e;
+        }
+    }
+
+    //History
+    .history-timeline {
+        .timeline-block {
+            .timeline-content {
+                background-color: $black-color;
+            }
+            .timeline-date {
+                color: $white-color;
+                span {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    //Case Studies
+    .dibiz-case-studies-area {
+        background-color: #0e0e0e;
+    }
+    .dibiz-case-studies-card {
+        .content {
+            background-color: $black-color;
+        }
+        &.with-style-two {
+            .content {
+                background-color: transparent;
+            }
+        }
+    }
+    .dibiz-case-studies-bottom-text {
+        a {
+            color: $white-color;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+
+    //Get Started
+    .dibiz-get-started-area {
+        background-color: #0e0e0e;
+    }
+
+    //Clients
+    .dibiz-clients-area-with-white-color {
+        .dibiz-clients-card {
+            background: $black-color;
+            border: 1px solid #595959;
+            p {
+                color: $white-color;
+            }
+            .client-info {
+                .title {
+                    span {
+                        color: $white-color;
+                    }
+                }
+            }
+            &:hover  {
+                background: $main-color;
+            }
+        }
+        &::before {
+            background: #0e0e0e;
+        }
+    }
+    .dibiz-clients-area {
+        &.bg-F7F8FF {
+            background-color: #0e0e0e;
+            .dibiz-clients-card {
+                background-color: $black-color;
+                border: 1px solid #595959;
+                p {
+                    color: $white-color;
+                }
+                .client-info {
+                    .title {
+                        span {
+                            color: $white-color;
+                        }
+                    }
+                }
+                &:hover  {
+                    background: $main-color;
+                }
+            }
+        }
+    }
+
+    //Solution
+    .dibiz-solutions-content {
+        .solutions-inner-content {
+                border-top: 1px solid #4a4a4b;
+                border-bottom: 1px solid #4a4a4b;
+                border-right: 1px solid #4a4a4b;
+                border-left: 2px solid $main-color;
+            p {
+                color: $white-color;
+            }
+        }
+    }
+
+    //Cart
+    .cart-table {
+        table {
+            thead {
+                tr {
+                    border-color: #787777;
+                    th {
+                        color: $white-color;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    border-color: #787777;
+                    td {
+                        color: $white-color;
+                        &.product-name {
+                            a {
+                                color: $white-color;
+                            }
+                        }
+                        &.product-quantity {
+                            .input-counter {
+                                input {
+                                    color: $white-color;
+                                    background-color: #0e0e0e;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cart-totals {
+        background: #0e0e0e;
+        ul {
+            li {
+                color: $white-color;
+                border-color: #666565;
+                span {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    //Checout
+    .billing-details {
+        .title {
+            border-bottom: 1px solid #777575;
+        }
+        .form-check {
+            .form-check-label {
+                color: $white-color;
+            }
+        }
+        .form-group {
+            .nice-select {
+               color: $white-color;
+                background: #0e0e0e;
+                border-color: #787777;
+                .list {
+                    background-color: #0e0e0e;
+                    .option {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+    .order-details {
+        .title {
+            border-bottom: 1px solid #777575;
+        }
+        .order-table {
+            table {
+                thead {
+                    tr {
+                        border-color: #737374;
+                        th {
+                            border-color: #737374;
+                            color: $white-color;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        border-color: #737374;
+                        td {
+                            color: $white-color;
+                            border-color: #737374;
+                            &.product-name {
+                                a {
+                                   color: $white-color;
+                                }
+                            }
+                            span {
+                                color: $white-color !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .payment-box {
+            background-color: #0e0e0e;
+            .payment-method {
+                p [type="radio"]:checked + label, p [type="radio"]:not(:checked) + label {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    .user-actions {
+        background: #0e0e0e;
+        span {
+            a {
+                color: $white-color;
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+
+    //Product Details
+    .products-details-desc {
+        .products-review {
+            .rating-count {
+                color: $white-color;
+            }
+        }
+        .products-meta {
+            span {
+                color: $white-color;
+            }
+        }
+        .products-add-to-cart {
+            .input-counter {
+                input {
+                    background-color: #0e0e0e;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    .products-details-tabs {
+        .nav {
+            .nav-item {
+                .nav-link {
+                    color: $white-color;
+                    &.active {
+                        color: $main-color;
+                    }
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+        .tab-content {
+            .tab-pane {
+                ul {
+                    li {
+                        color: $white-color;
+                        &::before {
+                            background-color: $white-color;
+                        }
+                    }
+                }
+                .products-reviews {
+                    .rating-count {
+                        span {
+                            color: $white-color;
+                        }
+                    }
+                }
+                .products-review-comments {
+                    h3 {
+                        border-bottom: 1px solid #5a5959;
+                    }
+                    .user-review {
+                        border-bottom: 1px solid #5a5959;
+                        .review-rating {
+                            span {
+                               color: $white-color;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .nav-tabs {
+            border-bottom: 1px solid #676768;
+        }
+    }
+
+    //Coming Soon
+    .coming-soon-content {
+        background: #0e0e0e;
+        .logo {
+            filter: invert(1);
+        }
+    }
+
+    //Login
+    .login-form {
+        background-color: #0e0e0e;
+        form {
+            .form-group {
+                label {
+                    color: $white-color;
+                }
+            }
+            .lost-your-password-wrap {
+                a {
+                   color: $white-color;
+                   &:hover {
+                       color: $main-color;
+                   }
+                }
+            }
+            .remember-me-wrap {
+                label {
+                    color: $white-color !important;
+                }
+            }
+        }
+    }
+    .register-form {
+        form {
+            .form-group {
+                label {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    //Privacy
+    .privacy-policy-content {
+        .blockquote,  blockquote {
+            background-color: #313030;
+        }
+        ol li, ul li {
+            color: $white-color;
+        }
+    }
+    .widget-area {
+        .widget {
+            background-color: #313030;
+        }
+        .widget_insight {
+            ul {
+                li {
+                    a {
+                       color: $white-color;
+                       &::before {
+                           background-color: $white-color;
+                       }
+                    }
+                }
+            }
+        }
+        .widget_categories {
+            ul {
+                li {
+                    a {
+                        color: $white-color;
+                        &:hover {
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Terms and Condition
+    .terms-of-service-content {
+        .blockquote, blockquote {
+            background-color: #313030;
+        }
+        ol li, ul li {
+            color: $white-color;
+        }
+    }
+
+    //Project
+    .portfolio-details-desc {
+        .content {
+            ul {
+                li {
+                   color: $white-color;
+                }
+            }
+        }
+    }
+    .portfolio-details-info {
+        background-color: #0e0e0e;
+        ul {
+            li {
+                color: $white-color;
+                border-bottom: 1px solid #5c5b5b;
+                span {
+                    color: $white-color;
+                }
+                a {
+                    color: $white-color;
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    //Contact
+    .contact-form {
+        background-color: #0e0e0e;
+        box-shadow: unset;
+    }
+    
+    /* Start "Startup IT Agency Demo", "CSS" */
+
+    .navbar-area-with-startup-it-agency {
+        .dibiz-nav {
+            .navbar {
+                .navbar-nav {
+                    .nav-item {
+                        a {
+                            color: var(--whiteColor);
+
+                            &:hover, &:focus, &.active {
+                                color: var(--mainColor-2);
+                            }
+                        }
+                        &:hover, &.active {
+                            a {
+                                color: var(--mainColor-2);
+                            }
+                        }
+                        .dropdown-menu {
+                            border-top: 3px solid var(--mainColor-2);
+    
+                            li {
+                                a {
+                                    color: var(--optionalColor-2);
+                                    
+                                    &:hover, &:focus, &.active {
+                                        color: var(--mainColor-2);
+                                    }
+                                }
+                                .dropdown-menu {
+                                    li {
+                                        a {
+                                            color: var(--optionalColor-2);
+                                            
+                                            &:hover, &:focus, &.active {
+                                                color: var(--mainColor-2);
+                                            }
+                                        }
+                                        .dropdown-menu {
+                                            li {
+                                                a {
+                                                    color: var(--optionalColor-2);
+                
+                                                    &:hover, &:focus, &.active {
+                                                        color: var(--mainColor-2);
+                                                    }
+                                                }
+                                                .dropdown-menu {
+                                                    li {
+                                                        a {
+                                                            color: var(--optionalColor-2);
+                        
+                                                            &:hover, &:focus, &.active {
+                                                                color: var(--mainColor-2);
+                                                            }
+                                                        }
+                                                        .dropdown-menu {
+                                                            li {
+                                                                a {
+                                                                    color: var(--optionalColor-2);
+                        
+                                                                    &:hover, &:focus, &.active {
+                                                                        color: var(--mainColor-2);
+                                                                    }
+                                                                }
+                                                                .dropdown-menu {
+                                                                    li {
+                                                                        a {
+                                                                            color: var(--optionalColor-2);
+                        
+                                                                            &:hover, &:focus, &.active {
+                                                                                color: var(--mainColor-2);
+                                                                            }
+                                                                        }
+                                                                        .dropdown-menu {
+                                                                            li {
+                                                                                a {
+                                                                                    color: var(--optionalColor-2);
+                        
+                                                                                    &:hover, &:focus, &.active {
+                                                                                        color: var(--mainColor-2);
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        &.active {
+                                                                            a {
+                                                                                color: var(--mainColor-2);
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                &.active {
+                                                                    a {
+                                                                        color: var(--mainColor-2);
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        &.active {
+                                                            a {
+                                                                color: var(--mainColor-2);
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                &.active {
+                                                    a {
+                                                        color: var(--mainColor-2);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.active {
+                                            a {
+                                                color: var(--mainColor-2);
+                                            }
+                                        }
+                                    }
+                                }
+                                &.active {
+                                    a {
+                                        color: var(--mainColor-2);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .others-option {
+                    .option-item {
+                        .search-box {
+                            .input-search {
+                                color: var(--whiteColor) !important;
+    
+                                &::placeholder {
+                                    color: var(--whiteColor) !important;
+                                }
+                                &:focus {
+                                    &::placeholder {
+                                        color: transparent;
+                                    }
+                                }
+                            }
+                            button {
+                                color: var(--whiteColor);
+
+                                i {
+                                    color: var(--whiteColor);
+    
+                                    &:hover {
+                                        color: var(--mainColor-2);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .it-main-banner-area {
+        background-color: #0e0e0e;
+    }
+
+    .easy-solution-card {
+        .solution-content {
+            background-color: #0e0e0e;
+        }
+        &:hover {
+            .solution-content {
+                background-color: var(--mainColor-2);
+            }
+        }
+    }
+
+    .it-banner-content {
+        .btn-box {
+            .video-btn {
+                color: var(--whiteColor);
+            }
+        }
+    }
+
+    .it-about-content {
+        .list {
+            li {
+                color: var(--whiteColor);
+            }
+        }
+    }
+
+    .it-services-card {
+        .services-content {
+            background-color: #0e0e0e;
+
+            .services-btn {
+                color: var(--whiteColor);
+            }
+        }
+    }
+
+    .it-book-appointmen-form {
+        background-color: #0e0e0e;
+
+        .form-group {
+            .form-control {
+                background: $black-color;
+                color: var(--whiteColor);
+                border: 1px solid $black-color;
+
+                &::placeholder {
+                    color: $white-color;
+                }
+                &:focus {
+                    &::placeholder {
+                        color: transparent;
+                    }
+                }
+            }
+            .nice-select {
+                background: $black-color;
+                color: var(--whiteColor);
+                border: 1px solid $black-color;
+            }
+        }
+    }
+
+    .it-partner-item {
+        a {
+            img {
+                filter: invert(1);
+            }
+        }
+    }
+
+    .it-feedback-area {
+        background: #0e0e0e;
+    }
+
+    .it-feedback-card {
+        background-color: $black-color;
+        border: 1px solid $black-color;
+
+        &:hover {
+            border: 1px solid var(--mainColor-2);
+        }
+        .info {
+            .title {
+                span {
+                    color: var(--whiteColor);
+                }
+            }
+        }
+    }
+
+    .it-team-card {
+        background-color: #0e0e0e;
+
+        .content {
+            background-color: #0e0e0e;
+
+            span {
+                color: var(--whiteColor);
+            }
+        }
+    }
+
+    .it-choose-area {
+        background-color: #0e0e0e;
+    }
+
+    .it-choose-content {
+        .list {
+            li {
+                color: var(--whiteColor);
+            }
+        }
+    }
+
+    .it-blog-card {
+        .blog-content {
+            background-color: #0e0e0e;
+
+            .blog-btn {
+                color: var(--whiteColor);
+            }
+            .meta {
+                li {
+                    color: var(--whiteColor);
+
+                    a {
+                        color: var(--whiteColor);
+
+                        &:hover {
+                            color: var(--mainColor-2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .it-services-details-desc {
+        .list {
+            li {
+                color: $white-color;
+            }
+        }
+    }
+
+    .startup-it-agency-sidebar-area {
+        .sidebar_search {
+            background: #0e0e0e;
+    
+            form {
+                .search-field {
+                    border: 1px solid var(--blackColor-2);
+                    background-color: var(--blackColor-2);
+                    color: var(--whiteColor);
+    
+                    &::placeholder {
+                        color: var(--whiteColor);
+                    }
+                    &:focus {
+                        border-color: var(--mainColor-2);
+    
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+        .sidebar_categories {
+            background: #0e0e0e;
+    
+            .categories-list {
+                li {
+                    a {
+                        color: var(--whiteColor);
+
+                        &:hover {
+                            color: var(--mainColor-2);
+                        }
+                    }
+                }
+            }
+        }
+        .sidebar_contact {
+            background: #0e0e0e;
+    
+            form {
+                .form-group {
+                    .form-control {
+                        border: 1px solid var(--blackColor-2);
+                        background-color: var(--blackColor-2);
+                        color: var(--whiteColor);
+        
+                        &::placeholder {
+                            color: var(--whiteColor);
+                        }
+                        &:focus {
+                            border-color: var(--mainColor-2);
+        
+                            &::placeholder {
+                                color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sidebar_popular_post {
+            background: #0e0e0e;
+
+            .item {
+                .info {
+                    .date {
+                        color: var(--whiteColor);
+                    }
+                }
+            }
+        }
+        .sidebar_tags {
+            background: #0e0e0e;
+    
+            a {
+                background: var(--blackColor-2);
+                border: 1px solid var(--blackColor-2);
+                color: var(--whiteColor);
+                
+                &:hover {
+                    color: var(--whiteColor);
+                    border-color: var(--mainColor-2);
+                    background-color: var(--mainColor-2);
+                }
+            }
+        }
+    }
+
+    .case-study-details-desc {
+        .content {
+            .list {
+                li {
+                    color: var(--whiteColor);
+                }
+            }
+        }
+    }
+
+    .pagination-area {
+        .page-numbers {
+            box-shadow: unset;
+        }
+    }
+    .single-blog-post {
+        .content {
+            .d-flex {
+                .info {
+                    span {
+                        color: var(--whiteColor);
+                    }
+                }
+            }
+        }
+    }
+
+    .it-blog-details-desc {
+        .blog-details-content {
+            .entry-meta {
+                li {
+                    color: var(--whiteColor);
+
+                    a {
+                        color: $white-color;
+
+                        &:hover {
+                            color: var(--mainColor-2);
+                        }
+                    }
+                }
+            }
+            .quote-block {
+                background-color: var(--blackColor-2);
+
+                p {
+                    color: $white-color;
+                }
+            }
+            .tag-and-share-content {
+                background-color: var(--blackColor-2);
+
+                .tag-list {
+                    li {
+                        a {
+                            color: $white-color;
+
+                            &:hover {
+                                color: var(--mainColor-2);
+                            }
+                        }
+                    }
+                }
+                .share-list {
+                    li {
+                        a {
+                            i {
+                                color: $white-color;
+
+                                &:hover {
+                                    color: var(--mainColor-2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .blog-leave-form {
+            background: #0e0e0e;
+    
+            form {
+                .form-control {
+                    border: 1px solid var(--blackColor-2);
+                    background-color: var(--blackColor-2);
+                    color: var(--whiteColor);
+    
+                    &::placeholder {
+                        color: var(--whiteColor);
+                    }
+                    &:focus {
+                        border-color: var(--mainColor-2);
+    
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .it-information-card {
+        background-color: var(--blackColor-2);
+
+        .content {
+            span {
+                color: $white-color;
+
+                a {
+                    color: $white-color;
+
+                    &:hover {
+                        color: var(--mainColor-2);
+                    }
+                }
+            }
+        }
+    }
+
+    .it-contact-form {
+        background: #0e0e0e;
+    
+        form {
+            .form-control {
+                border: 1px solid var(--blackColor-2);
+                background-color: var(--blackColor-2);
+                color: var(--whiteColor);
+
+                &::placeholder {
+                    color: var(--whiteColor);
+                }
+                &:focus {
+                    border-color: var(--mainColor-2);
+
+                    &::placeholder {
+                        color: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    /* End "Startup IT Agency Demo", "CSS" */
+
+
+    /* Start "Data Science & Analytics Demo", "CSS" */
+
+    .navbar-area-with-data-science {
+        .dibiz-nav {
+            .navbar {
+                .navbar-nav {
+                    .nav-item {
+                        a {
+                            color: var(--whiteColor);
+
+                            &:hover, &:focus, &.active {
+                                color: var(--whiteColor);
+                            }
+                        }
+                        &:hover, &.active {
+                            a {
+                                color: var(--whiteColor);
+                            }
+                        }
+                        .dropdown-menu {
+                            border-top: 3px solid var(--mainColor-3);
+    
+                            li {
+                                a {
+                                    color: var(--optionalColor-3);
+                                    
+                                    &:hover, &:focus, &.active {
+                                        color: var(--mainColor-3);
+                                    }
+                                }
+                                .dropdown-menu {
+                                    li {
+                                        a {
+                                            color: var(--optionalColor-3);
+                                            
+                                            &:hover, &:focus, &.active {
+                                                color: var(--mainColor-3);
+                                            }
+                                        }
+                                        .dropdown-menu {
+                                            li {
+                                                a {
+                                                    color: var(--optionalColor-3);
+                
+                                                    &:hover, &:focus, &.active {
+                                                        color: var(--mainColor-3);
+                                                    }
+                                                }
+                                                .dropdown-menu {
+                                                    li {
+                                                        a {
+                                                            color: var(--optionalColor-3);
+                        
+                                                            &:hover, &:focus, &.active {
+                                                                color: var(--mainColor-3);
+                                                            }
+                                                        }
+                                                        .dropdown-menu {
+                                                            li {
+                                                                a {
+                                                                    color: var(--optionalColor-3);
+                        
+                                                                    &:hover, &:focus, &.active {
+                                                                        color: var(--mainColor-3);
+                                                                    }
+                                                                }
+                                                                .dropdown-menu {
+                                                                    li {
+                                                                        a {
+                                                                            color: var(--optionalColor-3);
+                        
+                                                                            &:hover, &:focus, &.active {
+                                                                                color: var(--mainColor-3);
+                                                                            }
+                                                                        }
+                                                                        .dropdown-menu {
+                                                                            li {
+                                                                                a {
+                                                                                    color: var(--optionalColor-3);
+                        
+                                                                                    &:hover, &:focus, &.active {
+                                                                                        color: var(--mainColor-3);
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        &.active {
+                                                                            a {
+                                                                                color: var(--mainColor-3);
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                &.active {
+                                                                    a {
+                                                                        color: var(--mainColor-3);
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        &.active {
+                                                            a {
+                                                                color: var(--mainColor-3);
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                &.active {
+                                                    a {
+                                                        color: var(--mainColor-3);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.active {
+                                            a {
+                                                color: var(--mainColor-3);
+                                            }
+                                        }
+                                    }
+                                }
+                                &.active {
+                                    a {
+                                        color: var(--mainColor-3);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.with-relative {
+            .dibiz-nav {
+                .navbar {
+                    .navbar-brand {
+                        .main-logo {
+                            display: none;
+                        }
+                        .white-logo {
+                            display: block;
+                        }
+                    }
+                    .navbar-nav {
+                        .nav-item {
+                            a {
+                                color: var(--whiteColor);
+                                
+                                &:hover, &:focus, &.active {
+                                    color: var(--mainColor-3);
+                                }
+                            }
+                            &:hover, &.active {
+                                a {
+                                    color: var(--mainColor-3);
+                                }
+                            }
+                            .dropdown-menu {
+                                border-top: 3px solid var(--mainColor-3);
+        
+                                li {
+                                    a {
+                                        color: var(--optionalColor-3);
+                                        
+                                        &:hover, &:focus, &.active {
+                                            color: var(--mainColor-3);
+                                        }
+                                    }
+                                    .dropdown-menu {
+                                        li {
+                                            a {
+                                                color: var(--optionalColor-3);
+                                                
+                                                &:hover, &:focus, &.active {
+                                                    color: var(--mainColor-3);
+                                                }
+                                            }
+                                            .dropdown-menu {
+                                                li {
+                                                    a {
+                                                        color: var(--optionalColor-3);
+                    
+                                                        &:hover, &:focus, &.active {
+                                                            color: var(--mainColor-3);
+                                                        }
+                                                    }
+                                                    .dropdown-menu {
+                                                        li {
+                                                            a {
+                                                                color: var(--optionalColor-3);
+                            
+                                                                &:hover, &:focus, &.active {
+                                                                    color: var(--mainColor-3);
+                                                                }
+                                                            }
+                                                            .dropdown-menu {
+                                                                li {
+                                                                    a {
+                                                                        color: var(--optionalColor-3);
+                            
+                                                                        &:hover, &:focus, &.active {
+                                                                            color: var(--mainColor-3);
+                                                                        }
+                                                                    }
+                                                                    .dropdown-menu {
+                                                                        li {
+                                                                            a {
+                                                                                color: var(--optionalColor-3);
+                            
+                                                                                &:hover, &:focus, &.active {
+                                                                                    color: var(--mainColor-3);
+                                                                                }
+                                                                            }
+                                                                            .dropdown-menu {
+                                                                                li {
+                                                                                    a {
+                                                                                        color: var(--optionalColor-3);
+                            
+                                                                                        &:hover, &:focus, &.active {
+                                                                                            color: var(--mainColor-3);
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                            &.active {
+                                                                                a {
+                                                                                    color: var(--mainColor-3);
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    &.active {
+                                                                        a {
+                                                                            color: var(--mainColor-3);
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            &.active {
+                                                                a {
+                                                                    color: var(--mainColor-3);
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    &.active {
+                                                        a {
+                                                            color: var(--mainColor-3);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            &.active {
+                                                a {
+                                                    color: var(--mainColor-3);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.active {
+                                        a {
+                                            color: var(--mainColor-3);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .others-option {
+                        .option-item {
+                            .search-box {
+                                .input-search {
+                                    color: var(--whiteColor);
+        
+                                    &::placeholder {
+                                        color: var(--whiteColor);
+                                    }
+                                    &:focus {
+                                        &::placeholder {
+                                            color: transparent;
+                                        }
+                                    }
+                                }
+                                button {
+                                    i {
+                                        color: var(--mainColor-3);
+    
+                                        &:hover {
+                                            color: var(--blackColor-3);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ds-banner-large-shape {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+
+        img {
+            filter: invert(1);
+        }
+    }
+
+    .ds-services-card {
+        background-color: var(--blackColor-3);
+
+        .content {
+            .services-btn {
+                color: var(--whiteColor);
+            }
+        }
+    }
+
+    .ds-about-content {
+        .list {
+            li {
+                color: var(--whiteColor);
+            }
+        }
+    }
+
+    .ds-funfacts-card {
+        background-color: var(--blackColor-3);
+    }
+
+    .ds-features-content {
+        .list {
+            li {
+                color: var(--whiteColor);
+            }
+        }
+    }
+
+    .ds-process-card {
+        background-color: var(--blackColor-3);
+    }
+
+    .ds-solutions-area {
+        background-color: var(--blackColor-3);
+    }
+    .ds-solutions-content {
+        .list {
+            li {
+                color: var(--whiteColor);
+            }
+        }
+    }
+
+    .ds-feedback-card {
+        background-color: var(--blackColor-3);
+        border: 1px solid var(--blackColor-3);
+
+        .info {
+            .title {
+                span {
+                    color: var(--whiteColor);
+                }
+            }
+        }
+    }
+
+    .ds-feedback-area {
+        &::before {
+            background-color: #0e0e0e;
+        }
+    }
+    .ds-team-area {
+        background-color: #0e0e0e;
+    }
+
+    .ds-team-card {
+        .team-content {
+            background-color: #212121;
+
+            span {
+                color: var(--whiteColor);
+            }
+        }
+    }
+
+    .ds-pricing-area {
+        background-color: #0e0e0e;
+    }
+
+    .ds-pricing-card {
+        background-color: #212121;
+
+        .list {
+            li {
+                color: var(--whiteColor);
+            }
+        }
+    }
+
+    .ds-blog-card {
+        .blog-content {
+            background-color: #0e0e0e;
+
+            .meta {
+                li {
+                    color: var(--whiteColor);
+
+                    a {
+                        color: var(--whiteColor);
+                    }
+                }
+            }
+            .blog-btn {
+                color: var(--whiteColor);
+            }
+        }
+    }
+
+    .ds-feedback-area.with-white::before {
+        background-color: #000000;
+    }
+    .ds-feedback-area.with-white .ds-feedback-card {
+        border: 1px solid #000000;
+    }
+
+    .data-services-sidebar-area {
+        .sidebar_search {
+            background: #0e0e0e;
+    
+            form {
+                .search-field {
+                    border: 1px solid var(--blackColor-2);
+                    background-color: var(--blackColor-2);
+                    color: var(--whiteColor);
+    
+                    &::placeholder {
+                        color: var(--whiteColor);
+                    }
+                    &:focus {
+                        border-color: var(--mainColor-2);
+    
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+        .sidebar_categories {
+            background: #0e0e0e;
+    
+            .categories-list {
+                li {
+                    a {
+                        color: var(--whiteColor);
+
+                        &:hover {
+                            color: var(--mainColor-2);
+                        }
+                    }
+                }
+            }
+        }
+        .sidebar_contact {
+            background: #0e0e0e;
+    
+            form {
+                .form-group {
+                    .form-control {
+                        border: 1px solid var(--blackColor-2);
+                        background-color: var(--blackColor-2);
+                        color: var(--whiteColor);
+        
+                        &::placeholder {
+                            color: var(--whiteColor);
+                        }
+                        &:focus {
+                            border-color: var(--mainColor-2);
+        
+                            &::placeholder {
+                                color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sidebar_popular_post {
+            background: #0e0e0e;
+
+            .item {
+                .info {
+                    .date {
+                        color: var(--whiteColor);
+                    }
+                }
+            }
+        }
+        .sidebar_tags {
+            background: #0e0e0e;
+    
+            a {
+                background: var(--blackColor-2);
+                border: 1px solid var(--blackColor-2);
+                color: var(--whiteColor);
+                
+                &:hover {
+                    color: var(--whiteColor);
+                    border-color: var(--mainColor-2);
+                    background-color: var(--mainColor-2);
+                }
+            }
+        }
+    }
+
+    .ds-services-details-desc {
+        .list {
+            li {
+                color: var(--whiteColor);
+            }
+        }
+    }
+
+    .project-details-desc {
+        .list {
+            li {
+                color: var(--whiteColor);
+            }
+        }
+    }
+
+    .ds-blog-details-desc {
+        .blog-details-content {
+            .entry-meta {
+                li {
+                    color: var(--whiteColor);
+
+                    a {
+                        color: $white-color;
+
+                        &:hover {
+                            color: var(--mainColor-2);
+                        }
+                    }
+                }
+            }
+            .quote-block {
+                background-color: var(--blackColor-2);
+
+                p {
+                    color: $white-color;
+                }
+            }
+            .tag-and-share-content {
+                background-color: var(--blackColor-2);
+
+                .tag-list {
+                    li {
+                        a {
+                            color: $white-color;
+
+                            &:hover {
+                                color: var(--mainColor-2);
+                            }
+                        }
+                    }
+                }
+                .share-list {
+                    li {
+                        a {
+                            i {
+                                color: $white-color;
+
+                                &:hover {
+                                    color: var(--mainColor-2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .blog-leave-form {
+            background: #0e0e0e;
+    
+            form {
+                .form-control {
+                    border: 1px solid var(--blackColor-2);
+                    background-color: var(--blackColor-2);
+                    color: var(--whiteColor);
+    
+                    &::placeholder {
+                        color: var(--whiteColor);
+                    }
+                    &:focus {
+                        border-color: var(--mainColor-2);
+    
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ds-information-card {
+        background-color: var(--blackColor-2);
+
+        .content {
+            span {
+                color: $white-color;
+
+                a {
+                    color: $white-color;
+
+                    &:hover {
+                        color: var(--mainColor-2);
+                    }
+                }
+            }
+        }
+    }
+
+    .ds-contact-form {
+        background: #0e0e0e;
+    
+        form {
+            .form-control {
+                border: 1px solid var(--blackColor-2);
+                background-color: var(--blackColor-2);
+                color: var(--whiteColor);
+
+                &::placeholder {
+                    color: var(--whiteColor);
+                }
+                &:focus {
+                    border-color: var(--mainColor-2);
+
+                    &::placeholder {
+                        color: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media only screen and (max-width: 767px) {
+        .navbar-area-with-data-science {
+            background-color: #212020 ;
+        }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) { 
+        .navbar-area-with-data-science {
+            background-color: #212020 ;
+
+            .dibiz-responsive-nav .others-option .option-item .search-box .input-search {
+                color: var(--whiteColor);
+
+                &::placeholder {
+                    color: var(--whiteColor);
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1199px) { 
+        .navbar-area-with-data-science {
+            background-color: #212020 ;
+
+            .dibiz-responsive-nav .others-option .option-item .search-box .input-search {
+                color: var(--whiteColor);
+
+                &::placeholder {
+                    color: var(--whiteColor);
+                }
+            }
+        }
+    }
+
+    /* End "Data Science & Analytics Demo", "CSS" */
+}

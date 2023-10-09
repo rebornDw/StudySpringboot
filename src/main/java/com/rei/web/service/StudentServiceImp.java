@@ -4,11 +4,13 @@ import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.rei.web.dao.StudentDao;
 import com.rei.web.model.Student;
 
 @Service
+@Transactional
 public class StudentServiceImp implements StudentService  {
 
 	@Autowired
@@ -22,4 +24,21 @@ public class StudentServiceImp implements StudentService  {
 		return findByName;
 	}
 
+
+	@Override
+	public ArrayList<Student> getStuByNianji(String nianji) {
+		// TODO Auto-generated method stub
+		ArrayList<Student> findByNianji = studentDao.findStudentByNianji(nianji);
+		return findByNianji;
+	}
+	
+	
+	@Override
+	public void deleteStuByName(String name) {
+		// TODO Auto-generated method stub
+		studentDao.deleteStudentByName(name);
+	}
+
+
 }
+

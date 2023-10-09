@@ -8,5 +8,9 @@ public interface StudentService {
 
 	public ArrayList<Student> getStuByName(String name);
 	
+    public ArrayList<Student> getStuByNianji(String nianji);
+    
+    public void deleteStuByName(String name);
+	
 	
 }

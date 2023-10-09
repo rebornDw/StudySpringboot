@@ -20,7 +20,7 @@ public class StudyController {
 	@Autowired
 	StudentService studentService;
 	
-	@RequestMapping("test1")
+	@RequestMapping(value="test1",method=RequestMethod.GET)
 	public String study() {
 		return "study";
 	}
@@ -40,9 +40,7 @@ public class StudyController {
 		Student stu = new Student();
 		stu.setId(1);
 		stu.setName("zhangsan");
-		stu.setAge(18);
-		stu.setNianji(1);
-		stu.setDescription("this is a student");
+	
 		return stu;
 	}
 	
@@ -56,17 +54,13 @@ public class StudyController {
 		Student stu = new Student();
 		stu.setId(1);
 		stu.setName("zhangsan");
-		stu.setAge(18);
-		stu.setNianji(1);
-		stu.setDescription("this is a student");
+
 		
 		
 		Student stu1 = new Student();
 		stu1.setId(1);
 		stu1.setName("lisi");
-		stu1.setAge(19);
-		stu1.setNianji(2);
-		stu1.setDescription("this is a student2");
+
 		
 		
 		stuList.add(stu);
@@ -84,17 +78,13 @@ public class StudyController {
 		Student stu = new Student();
 		stu.setId(1);
 		stu.setName("zhangsan");
-		stu.setAge(18);
-		stu.setNianji(1);
-		stu.setDescription("this is a student");
+
 		
 		
 		Student stu1 = new Student();
 		stu1.setId(1);
 		stu1.setName("lisi");
-		stu1.setAge(19);
-		stu1.setNianji(2);
-		stu1.setDescription("this is a student2");
+
 		
 		
 		stuList.add(stu);

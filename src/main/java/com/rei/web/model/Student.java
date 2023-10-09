@@ -7,29 +7,27 @@ import javax.persistence.*;
 public class Student {
 	
     @Id
-	public long id;
+	public int id;
 	
 	public String sex;
 	
-	public String description;
-	
-	public Integer age;
+	public String age;
 	
 	public String name;
 	
-	public Integer nianji;
+	public String nianji;
 	
-	public Integer t_id;
+	public String t_id;
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
-	public String getSex() {
+	public String getSex() { 	
 		return sex;
 	}
 
@@ -37,19 +35,11 @@ public class Student {
 		this.sex = sex;
 	}
 
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public Integer getAge() {
+	public String getAge() {
 		return age;
 	}
 
-	public void setAge(Integer age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 
@@ -61,19 +51,19 @@ public class Student {
 		this.name = name;
 	}
 
-	public Integer getNianji() {
+	public String getclass() {
 		return nianji;
 	}
 
-	public void setNianji(Integer nianji) {
+	public void setclass(String nianji) {
 		this.nianji = nianji;
 	}
 
-	public Integer getT_id() {
+	public String getT_id() {
 		return t_id;
 	}
 
-	public void setT_id(Integer t_id) {
+	public void setT_id(String t_id) {
 		this.t_id = t_id;
 	}
 	

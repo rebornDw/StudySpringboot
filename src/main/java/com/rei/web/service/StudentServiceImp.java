@@ -39,6 +39,18 @@ public class StudentServiceImp implements StudentService  {
 		studentDao.deleteStudentByName(name);
 	}
 
+	
+	@Override
+	public int updateStuByNianji(Long id, String nianji) {
+		// TODO Auto-generated method stub
+		return studentDao.updateStudentByNianji(id, nianji);
+	}
+
+
+	@Override
+	public ArrayList<Student> getStuById(Long id) {
+		return studentDao.findStudentById(id);
+	}
 
 }
 

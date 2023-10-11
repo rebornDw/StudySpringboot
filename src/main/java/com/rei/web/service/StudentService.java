@@ -11,6 +11,10 @@ public interface StudentService {
     public ArrayList<Student> getStuByNianji(String nianji);
     
     public void deleteStuByName(String name);
-	
+    
+    public int updateStuByNianji(Long id , String nianji);
+
+	public ArrayList<Student> getStuById(Long id);
+
 	
 }

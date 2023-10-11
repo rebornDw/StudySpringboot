@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+	<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+	<script src='/js/study3.js'></script>
+	<link rel="stylesheet" type="text/css"  href='/css/study2.css'></link>
+<meta charset="UTF-8">
+<title>株式会社REI作业</title>
+</head>
+<div >
+    <p style="background-color:#66CC99; color:#993300; height:30px; line-height:30px;">修改逻辑练习：</pstyle="background-color:#66CC99; color:#993300; height:30px; line-height:30px;">
+    <ol>
+        <li><a target="_blank">画面：两个入力框，第一个用于指定被修改的id，第二个输入要修改的年级。
+          修改按钮，点击之后可以修改年级，并且重新将修改后的结果再次表示在画面上。</a></li>
+         <li><a target="_blank">JS：新的事件，修改按钮的点击事件，需要两个参数（画面输入的id，画面输入的年级）。</a></li>
+       <li><a  target="_blank">Controller：获取画面的两个参数，调用修改的service以及再次修改后再次查询的service。</a></li>
+        <li><a target="_blank">Service：新增修改的service处理逻辑（Service-Serviceimp）。</a></li>
+         <li><a target="_blank">Dao：拿到之前两个参数（id，年级），id作为条件，年级作为要修改的值。</a></li>
+    </ol>
+</div>
+<br>
+<br>
+<div>
+<strong>ID：</strong><input id="id"></input>
+<button id="query">查询</button>
+<br>
+<strong>年级：</strong><input id="stuNianji"></input>
+<button id="update">修改</button>
+</div>
+<br>
+<div >
+  <table id="stuTable">
+  <tr>
+	<th>ID</th>
+    <th>姓名</th>
+    <th>性别</th>
+    <th>年龄</th>
+    <th>年级</th>
+  </tr>
+</table>	
+	
+</div>
+</body>
+</html>

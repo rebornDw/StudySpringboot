@@ -24,6 +24,17 @@ public interface StudentDao extends JpaRepository<Student, Long> {
 	@Query("delete from Student s where s.name= :name")
 	public void deleteStudentByName(@Param(value = "name") String name);
 	
+
+	@Modifying
+	@Query("update Student s set s.nianji = :nianji where s.id = :id")
+	public int updateStudentByNianji(
+			@Param(value="id") Long id, 
+			@Param(value = "nianji") String nianji
+			);
 	
+	
+	@Query("select s from Student s where s.id = :id")
+	public ArrayList<Student> findStudentById(@Param(value = "id") Long id);
+
 	
 }

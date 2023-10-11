@@ -18,12 +18,12 @@ public class Study2Controller {
 	StudentService studentService;
 	
 	
-	@RequestMapping(value="study0923",method=RequestMethod.GET)
+	@RequestMapping(value="study092300000",method=RequestMethod.GET)
 	public String study2() {
 		return "study2";
 	}
 	
-	@RequestMapping(value="study09",method=RequestMethod.POST)
+	@RequestMapping(value="study092300000",method=RequestMethod.POST)
 	@ResponseBody
 	public ArrayList<Student> studenByNianji(String nianji){
 		ArrayList<Student> stuByNianji = studentService.getStuByNianji(nianji);

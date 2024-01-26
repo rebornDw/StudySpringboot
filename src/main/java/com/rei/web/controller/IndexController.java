@@ -11,7 +11,6 @@ import com.rei.web.service.StudentService;
 @Controller
 public class IndexController {
 
-	
 	@Autowired
 	public StudentService studentService;
 	

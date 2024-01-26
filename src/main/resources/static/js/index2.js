@@ -1,14 +1,10 @@
-
-        function submitForm() {
-         var formData = {
-                textInput: $('#textInput').val(),
-                dropdown: $('#dropdown').val() 
-            };
-
-
-        console.log(JSON.stringify(formData)); 
-        
-     var imageInput = document.getElementById("imageInput");
+function submitForm() {
+    var formData = {
+        textInput: $('#textInput').val(),
+        dropdown: $('#dropdown').val() 
+    };
+    console.log(JSON.stringify(formData)); 
+    var imageInput = document.getElementById("imageInput");
     var imageContainer = document.getElementById("imageContainer");
 
     // 获取上传的图片文件
@@ -28,26 +24,20 @@
         imageContainer.innerHTML = "";
         imageContainer.appendChild(img);
     };
-
     // 以DataURL形式读取图片内容
     reader.readAsDataURL(file); 
- 
-
-
-
-            
-            $.ajax({
-                type: 'POST',
-                url: '/demo/submit',
-                contentType: 'application/json',
-                data: JSON.stringify(formData),
-                success: function(response) {
-                    console.log(response);
-                },
-                error: function(error) {
-                    console.error(error);
-                }
-            });
+    $.ajax({
+        type: 'POST',
+        url: '/demo/submit',
+        contentType: 'application/json',
+        data: JSON.stringify(formData),
+        success: function(response) {
+            console.log(response);
+        },
+        error: function(error) {
+            console.error(error);
         }
+    });
+}
 
 

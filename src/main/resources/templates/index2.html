@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <form id="myForm">
+    <form id="myForm" action="/demo/submitform" method="post" enctype="multipart/form-data">
         <label for="textInput">输入文本：</label>
         <input type="text" id="textInput" name="textInput"><br>
 
@@ -21,25 +21,18 @@
         </select><br>
 
         <label for="checkbox">多选框：</label>
-        <input type="checkbox" id="checkbox1" name="checkbox[]" value="value1">
+        <input type="checkbox" id="checkbox1" name="checkbox" value="value1">
         <label for="checkbox1">test1</label>
-        <input type="checkbox" id="checkbox2" name="checkbox[]" value="value2">
+        <input type="checkbox" id="checkbox2" name="checkbox" value="value2">
         <label for="checkbox2">test2</label>
-        <input type="checkbox" id="checkbox3" name="checkbox[]" value="value3">
+        <input type="checkbox" id="checkbox3" name="checkbox" value="value3">
         <label for="checkbox3">test3</label><br>
         
        <label for="imageInput">选择图片：</label>
-    <input type="file" id="imageInput" accept="image/*">
-
-    <!-- 上传图片按钮 -->
-    <button type="button" onclick="uploadAndDisplayImage()">上传图片并显示</button>
-
-    <!-- 显示图片的区域 -->
-    <div id="imageContainer"></div>
-    
-    
-        <button type="button" onclick="submitForm()">提交</button>
+       <input type="file" id="imageInput" name="imageInput" accept="image/*">
+ 
+        <button  type="submit">提交</button>
     </form>
-     <div th:text="${submissionMessage}"></div>
+      
 </body>
 </html>

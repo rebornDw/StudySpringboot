@@ -1,9 +1,13 @@
 package com.rei.web.controller;
 
 import java.util.ArrayList;
+import java.util.Map;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -11,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.rei.web.model.Student;
 import com.rei.web.model.Teacher;
 import com.rei.web.service.StudentService;
+
 
 
 @Controller
@@ -25,6 +30,32 @@ public class StudyController {
 		return "study";
 	}
 	
+	//第一次作业
+	@RequestMapping("hello")
+	public String helloworld() {
+		return "hello";
+	}
+	
+	//第二次作业
+	@RequestMapping(value="hello1",method=RequestMethod.POST)
+	@ResponseBody
+	public String hello1(String data) {
+		return data;
+	}
+	
+	@RequestMapping(value="hello2",method=RequestMethod.POST)
+	@ResponseBody
+	public String hello2(@RequestBody Map<String, ArrayList<String>> data ) {
+		ArrayList<String> num = data.get("data");
+		return num.toString();
+	}
+	
+	@RequestMapping(value="helloForm",method=RequestMethod.POST)
+	public String hello3(String number2, Model model) {
+		model.addAttribute("data", number2);
+		return "hello";
+	}
+    //作业
 	
 	@RequestMapping("test2")
 	@ResponseBody

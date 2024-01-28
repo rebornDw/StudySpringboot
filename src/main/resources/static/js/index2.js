@@ -1,43 +1,33 @@
 function submitForm() {
-    var formData = {
-        textInput: $('#textInput').val(),
-        dropdown: $('#dropdown').val() 
-    };
-    console.log(JSON.stringify(formData)); 
-    var imageInput = document.getElementById("imageInput");
-    var imageContainer = document.getElementById("imageContainer");
 
-    // 获取上传的图片文件
-    var file = imageInput.files[0];
+	var imageInput = $("#imageInputAjax");
+	// 获取上传的图片文件
+	var file = imageInput[0].files[0];
+	//jquery 获取值
+	var formData = new FormData();
+	
+	formData.append("textInputAjax", $('#textInputAjax').val());
+	formData.append("selectAjax", $('#selectAjax').val());
+	formData.append("checkboxAjax1", $('#checkboxAjax1').val());
+	formData.append("checkboxAjax2", $('#checkboxAjax2').val());
+	formData.append("checkboxAjax3", $('#checkboxAjax3').val());
+	formData.append("file", file);
 
-    // 使用FileReader读取文件内容
-    var reader = new FileReader();
 
-    reader.onload = function (e) {
-        // 创建一个图片元素
-        var img = document.createElement("img");
-        
-        // 设置图片的源为读取到的DataURL
-        img.src = e.target.result;
-
-        // 将图片添加到页面上
-        imageContainer.innerHTML = "";
-        imageContainer.appendChild(img);
-    };
-    // 以DataURL形式读取图片内容
-    reader.readAsDataURL(file); 
-    $.ajax({
-        type: 'POST',
-        url: '/demo/submit',
-        contentType: 'application/json',
-        data: JSON.stringify(formData),
-        success: function(response) {
-            console.log(response);
-        },
-        error: function(error) {
-            console.error(error);
-        }
-    });
+	// 以DataURL形式读取图片内容
+	$.ajax({
+		type: 'POST',
+		url: '/demo/submit',
+		data: formData,
+		processData: false,
+		contentType: false,
+		success: function(response) {
+			console.log(response);
+		},
+		error: function(error) {
+			console.error(error);
+		}
+	});
 }
 
 

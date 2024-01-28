@@ -1,38 +1,64 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kichi的作业</title>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="js/index2.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>kichi的作业</title>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="/js/index2.js"></script>
 </head>
+
 <body>
+	<br>------------Form提交----------------<br>
+	<form id="myForm" action="/demo/submitform" method="post" enctype="multipart/form-data">
+		<label for="textInput">输入文本：</label>
+		<input type="text" id="textInput" name="textInput"><br>
 
-    <form id="myForm" action="/demo/submitform" method="post" enctype="multipart/form-data">
-        <label for="textInput">输入文本：</label>
-        <input type="text" id="textInput" name="textInput"><br>
+		<label for="dropdown">下拉框：</label>
+		<select id="dropdown" name="dropdown">
+			<option value="option1">test1</option>
+			<option value="option2">test2</option>
+			<option value="option3">test3</option>
+		</select><br>
 
-        <label for="dropdown">下拉框：</label>
-        <select id="dropdown" name="dropdown">
-            <option value="option1">test1</option>
-            <option value="option2">test2</option>
-            <option value="option3">test3</option>
-        </select><br>
+		<label for="checkbox">多选框：</label>
+		<input type="checkbox" id="checkbox1" name="checkbox" value="value1">
+		<label for="checkbox1">test1</label>
+		<input type="checkbox" id="checkbox2" name="checkbox" value="value2">
+		<label for="checkbox2">test2</label>
+		<input type="checkbox" id="checkbox3" name="checkbox" value="value3">
+		<label for="checkbox3">test3</label><br>
 
-        <label for="checkbox">多选框：</label>
-        <input type="checkbox" id="checkbox1" name="checkbox" value="value1">
-        <label for="checkbox1">test1</label>
-        <input type="checkbox" id="checkbox2" name="checkbox" value="value2">
-        <label for="checkbox2">test2</label>
-        <input type="checkbox" id="checkbox3" name="checkbox" value="value3">
-        <label for="checkbox3">test3</label><br>
-        
-       <label for="imageInput">选择图片：</label>
-       <input type="file" id="imageInput" name="imageInput" accept="image/*">
- 
-        <button  type="submit">提交</button>
-    </form>
-      
+		<label for="imageInput">选择图片：</label>
+		<input type="file" id="imageInput" name="imageInput" accept="image/*">
+
+		<button type="submit">提交</button>
+	</form>
+
+	<br>-------------Ajax提交---------------<br>
+	<label for="textInput">输入文本：</label>
+	<input type="text" id="textInputAjax"><br>
+
+	<label for="dropdown">下拉框：</label>
+	<select id="selectAjax">
+		<option value="option1">test1</option>
+		<option value="option2">test2</option>
+		<option value="option3">test3</option>
+	</select><br>
+
+	<label for="checkbox">多选框：</label>
+	<input type="checkbox" id="checkboxAjax1" value="value1">
+	<label for="checkbox1">test1</label>
+	<input type="checkbox" id="checkboxAjax2" value="value2">
+	<label for="checkbox2">test2</label>
+	<input type="checkbox" id="checkboxAjax3" value="value3">
+	<label for="checkbox3">test3</label><br>
+
+	<label for="imageInput">选择图片：</label>
+	<input type="file" id="imageInputAjax" accept="image/*">
+
+	<button onclick="submitForm()">提交</button>
 </body>
+
 </html>

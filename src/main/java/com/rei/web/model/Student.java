@@ -2,8 +2,11 @@ package com.rei.web.model;
 
 import javax.persistence.*;
 
+import org.springframework.stereotype.Component;
+
 @Entity
 @Table(name = "student")
+@Component
 public class Student {
 	
     @Id
@@ -17,7 +20,7 @@ public class Student {
 	
 	public String name;
 	
-	public Integer nianji;
+	public String nianji;
 	
 	public Integer t_id;
 
@@ -61,11 +64,11 @@ public class Student {
 		this.name = name;
 	}
 
-	public Integer getNianji() {
+	public String getNianji() {
 		return nianji;
 	}
 
-	public void setNianji(Integer nianji) {
+	public void setNianji(String nianji) {
 		this.nianji = nianji;
 	}
 

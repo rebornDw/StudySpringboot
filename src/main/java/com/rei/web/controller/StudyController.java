@@ -41,7 +41,7 @@ public class StudyController {
 		stu.setId(1);
 		stu.setName("zhangsan");
 		stu.setAge(18);
-		stu.setNianji(1);
+		stu.setNianji("1");
 		stu.setDescription("this is a student");
 		return stu;
 	}
@@ -57,7 +57,7 @@ public class StudyController {
 		stu.setId(1);
 		stu.setName("zhangsan");
 		stu.setAge(18);
-		stu.setNianji(1);
+		stu.setNianji("1");
 		stu.setDescription("this is a student");
 		
 		
@@ -65,7 +65,7 @@ public class StudyController {
 		stu1.setId(1);
 		stu1.setName("lisi");
 		stu1.setAge(19);
-		stu1.setNianji(2);
+		stu1.setNianji("1");
 		stu1.setDescription("this is a student2");
 		
 		
@@ -85,7 +85,7 @@ public class StudyController {
 		stu.setId(1);
 		stu.setName("zhangsan");
 		stu.setAge(18);
-		stu.setNianji(1);
+		stu.setNianji("1");
 		stu.setDescription("this is a student");
 		
 		
@@ -93,7 +93,7 @@ public class StudyController {
 		stu1.setId(1);
 		stu1.setName("lisi");
 		stu1.setAge(19);
-		stu1.setNianji(2);
+		stu1.setNianji("1");
 		stu1.setDescription("this is a student2");
 		
 		

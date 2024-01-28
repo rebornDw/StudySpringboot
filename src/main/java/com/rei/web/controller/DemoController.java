@@ -1,20 +1,29 @@
 package com.rei.web.controller;
 
+
+import java.io.File;
+import java.io.IOException;
+
+
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.rei.web.model.FormData;
+
 
 @Controller
 
+@RequestMapping("/demo")
 public class DemoController {
+
 	@RequestMapping("/")
 	String index() {
 		return "index";
@@ -31,19 +40,36 @@ public class DemoController {
 	 * @param formData
 	 * @param model
 	 * @return
+	 * @throws IOException
+	 * @throws IllegalStateException
 	 */
 	@PostMapping("/submit")
-	public String handleFormSubmission(@RequestBody FormData formData, Model model) {
+	@ResponseBody
+	public String handleFormSubmission(
+			@RequestPart("textInputAjax") String textInputAjax,
+			@RequestPart("selectAjax") String selectAjax,
+			@RequestPart("checkboxAjax1") String checkboxAjax1,
+			@RequestPart("checkboxAjax2") String checkboxAjax2,
+			@RequestPart("checkboxAjax3") String checkboxAjax3,
+			@RequestPart("file") MultipartFile file
+			)
+			throws IllegalStateException, IOException {
 		// Handle form submission logic here
-		System.out.println("Received form submission:");
-		System.out.println("TextInput: " + formData.getTextInput());
-		System.out.println("Dropdown: " + formData.getDropdown());
-		System.out.println("Checkbox values: " + formData.getCheckbox());
+		System.out.println("textInputAjax: " + textInputAjax);
+		System.out.println("Select: " + selectAjax);
+		System.out.println("checkboxAjax1: " + checkboxAjax1);
+		System.out.println("Checkbox values: " + checkboxAjax2);
+		System.out.println("Checkbox values: " + checkboxAjax3);
 
-		// You can add attributes to the model if needed for the response view
-		model.addAttribute("submissionMessage", "Form submitted successfully!");
+		// 图片的名字
+		String originalFilename = file.getOriginalFilename();
+		System.out.println("originalFilename: " + originalFilename);
+		// 要保存的路径
+		String path = "C:\\Users\\Administrator\\Desktop\\img\\";
 
-		// Return a view to display after form submission (e.g., a success page)
+		File imgFile = new File(path + originalFilename);
+		file.transferTo(imgFile);
+
 		return "success";
 	}
 
@@ -55,17 +81,30 @@ public class DemoController {
 	 * @param file
 	 * @param checkbox
 	 * @return
+	 * @throws IOException
+	 * @throws IllegalStateException
 	 */
 	@PostMapping("/submitform")
+	@ResponseBody
 	public String submitform(@RequestParam("textInput") String textInput, @RequestParam("dropdown") String dropdown,
 			@RequestParam("imageInput") MultipartFile file,
-			@RequestParam(name = "checkbox", required = false) List<String> checkbox) {
+			@RequestParam(name = "checkbox", required = false) List<String> checkbox)
+			throws IllegalStateException, IOException {
 		// Handle form submission logic here
 		System.out.println("Received form submission:");
 		System.out.println("TextInput: " + textInput);
 		System.out.println("Dropdown: " + dropdown);
 		System.out.println("file: " + file.getOriginalFilename());
 		System.out.println("Checkbox values: " + checkbox);
+
+		// 图片的名字
+		String originalFilename = file.getOriginalFilename();
+		// 要保存的路径
+		String path = "C:\\Users\\Administrator\\Desktop\\img\\";
+
+		File imgFile = new File(path + originalFilename);
+		file.transferTo(imgFile);
+
 
 		// Return a view to display after form submission (e.g., a success page)
 		return "success";
